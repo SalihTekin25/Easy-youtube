@@ -1,0 +1,55 @@
+.image {
+    width: 400px;
+    height: 240px;
+    object-fit: contain;
+    cursor: pointer;
+   
+}
+
+.input {
+    box-shadow: 0px 0px 5px 1px #00000026;
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.6rem;
+}
+
+.icon {
+    width: 40px;
+}
+
+.div {
+    margin: 20px;
+}
+
+.grid {
+    margin-top: 20px;
+
+}
+
+
+.searchContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.stat {
+    box-shadow: 0px 0px 5px 1px #00000026;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.4rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 12cm;
+}
+.share{
+    width: 45%;
+}
+.download{
+    width: 45%;
+}
+.spinner{
+    margin-top: 6cm;
+    margin-left: 48%;
+}

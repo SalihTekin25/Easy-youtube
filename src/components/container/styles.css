@@ -1,0 +1,28 @@
+.button {
+    margin-right: 5px;
+}
+
+.menu {
+    padding: 13px;
+    display: flex;
+    justify-content: space-between;
+    /* border-bottom: solid 1px #7F7F7F; */
+    box-shadow: 0px 0px 8px 1px #0000003d;
+    line-height: 2px;
+    align-items: center;
+
+}
+
+.iconbutton {
+    width: 3cm;
+}
+
+.wattodlogo {
+    width: 2cm;
+}
+.dark{
+    background: grey;
+}
+.Light{
+    background: #fff;
+}
