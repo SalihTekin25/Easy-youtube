@@ -21,15 +21,23 @@ const DataTypes = (mp3, mp4) => {
     const message = {
         'tr': {
             download: "Indir",
-            datatype:"Format"
+            datatype: "Format"
         },
         'de': {
             download: "Herunterladen",
-            datatype:"Format"
+            datatype: "Format"
         },
         'en': {
             download: "Download",
-            datatype:"Format"
+            datatype: "Format"
+        },
+        'fr': {
+            download: "Télécharger",
+            datatype: "Format"
+        },
+        'ar':{
+            download: "تحميل",
+            datatype: "شكل"
         }
     }
 

@@ -14,12 +14,12 @@ const Liste = (index) => {
 
     const message = {
         'tr': {
-            share: "Indirimi Paylas",
+            share: "Indirmeyi paylaş",
             search: "Ara",
             videos: "tr"
         },
         'de': {
-            share: "DownloadTeilen",
+            share: "Download teilen",
             search: "Suchen",
             videos: "de"
         },
@@ -27,6 +27,16 @@ const Liste = (index) => {
             share: "Share Download",
             search: "Search",
             videos: "en"
+        },
+        'fr':{
+            share: "Partager Télécharger",
+            search: "Chercher",
+            videos: "fr"
+        },
+        'ar':{
+            share: "مشاركة التنزيل",
+            search: "يبحث",
+            videos: "ar"
         }
     }
 

@@ -34,7 +34,7 @@ const Navbar = (value) => {
     const message = {
         'tr': {
             home: "Ana Sayfa",
-            info: "Hakkinda",
+            info: "Bilgi",
             close: "Kapat"
         },
         'de': {
@@ -44,8 +44,18 @@ const Navbar = (value) => {
         },
         'en': {
             home: "Home",
-            info: "About",
+            info: "Info",
             close: "Close"
+        },
+        'fr': {
+            home: "Page d'accueilme",
+            info: "Info",
+            close: "Proche"
+        },
+        'ar':{
+            home: "الصفحة الرئيسية",
+            info: "معلومات",
+            close: "قريب"
         }
     }
 

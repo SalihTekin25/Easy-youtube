@@ -20,22 +20,36 @@ const Settings = () => {
             title: "Ayarlar",
             title2: "Ayarlar",
             close: "Kapat",
-            theme: "Temayi Degistir",
-            language: "Dil Degistir"
+            theme: "Temayı değiştir",
+            language: "Dil"
         },
         'de': {
             title: "Einstellungen",
             title2: "Einstellungen",
             close: "Schließen",
-            theme: "Ändere Thema",
-            language: "Sprache ändern"
+            theme: "Thema ändern",
+            language: "Sprache"
         },
         'en': {
             title: "Settings",
             title2: "Settings",
             close: "Close",
             theme: "Change Theme",
-            language: "Change Language"
+            language: "Language"
+        },
+        'fr':{
+            title: "Réglages",
+            title2: "Réglages",
+            close: "Proche",
+            theme: "Change le thème",
+            language: "Langue"
+        },
+        'ar':{
+            title: "إعدادات",
+            title2: "إعدادات",
+            close: "قريب",
+            theme: "غير الخلفية",
+            language: "لغة" 
         }
     }
 
@@ -44,7 +58,7 @@ const Settings = () => {
     return (
 
         <>
-            <Button bgGradient="linear(to-r, #f3360e, #fb4b18)" color='#fff'  mr="5px" onClick={onOpen}>{message[lang].title}</Button>
+            <Button bgGradient="linear(to-r, #f3360e, #fb4b18)" color='#fff' mr="5px" onClick={onOpen}>{message[lang].title}</Button>
 
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
@@ -64,12 +78,14 @@ const Settings = () => {
                                 <Radio value='tr'>Turkish</Radio>
                                 <Radio value='en'>English</Radio>
                                 <Radio value='de'>German</Radio>
+                                <Radio value='fr'>France</Radio>
+                                <Radio value='ar'>Arabic</Radio>
                             </Stack>
                         </RadioGroup>
                     </ModalBody>
 
                     <ModalFooter>
-                        <Button  mr={40} onClick={onClose}>
+                        <Button mr={40} onClick={onClose}>
                             {message[lang].close}
                         </Button>
                     </ModalFooter>

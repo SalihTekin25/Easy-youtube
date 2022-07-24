@@ -17,6 +17,12 @@ const About = () => {
     },
     'en': {
       info: "Hello and welcome to the Wattod tools you can download videos and audios here Have fun"
+    },
+    'fr':{
+      info: "Bonjour et bienvenue sur les outils Wattod vous pouvez télécharger des vidéos et des audios ici Amusez-vous"
+    },
+    'ar':{
+      info: "مرحبًا ومرحبًا بكم في أدوات Wattod ، يمكنك تنزيل مقاطع الفيديو والتسجيلات الصوتية هنا واستمتع"
     }
   }
   return (
