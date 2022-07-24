@@ -20,7 +20,7 @@ import {
 import './styles.css'
 import Logo from './WattodLogo.png'
 import { useState } from 'react'
-import ChangeLang from '../pages/ChangeLang'
+import ChangeLang from '../pages/Setting'
 import { Language } from '../../context/Language';
 
 
@@ -34,26 +34,22 @@ const Navbar = (value) => {
     const message = {
         'tr': {
             home: "Ana Sayfa",
-            theme: "Temayi Degistir",
             info: "Hakkinda",
             close: "Kapat"
         },
         'de': {
             home: "Startseite",
-            theme: "Ändere Thema",
             info: "Info",
             close: "Schließen"
         },
         'en': {
             home: "Home",
-            theme: "Change Theme",
             info: "About",
             close: "Close"
         }
     }
 
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const { colorMode, toggleColorMode } = useColorMode()
 
     return (
         <div>
@@ -65,9 +61,6 @@ const Navbar = (value) => {
 
                     <Button bgGradient="linear(to-r, #f3360e, #fb4b18)" color="#fff" variant='solid' className="button">
                         <Link to="/">{message[lang].home}</Link>
-                    </Button>
-                    <Button onClick={toggleColorMode} mr="5px">
-                        {message[lang].theme}
                     </Button>
 
                     <ChangeLang />
@@ -84,7 +77,7 @@ const Navbar = (value) => {
                             </ModalBody>
 
                             <ModalFooter>
-                                <Button colorScheme='blue' mr={40} onClick={onClose}>
+                                <Button mr={40} onClick={onClose}>
                                     {message[lang].close}
                                 </Button>
                             </ModalFooter>
