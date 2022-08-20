@@ -44,14 +44,24 @@
     height: 12cm;
 }
 .share{
-    width: 45%;
+
+    margin-left: 1%;
+    width: 49%;
+    margin-top:5px;    
+    
+
 }
 .download{
-    width: 45%;
+    width: 49%;
+    margin-top: 5px;
+    margin-right: 1%;
+    
+    
+
 }
 .spinner{
-    margin-top: 6cm;
-    margin-left: 48%;
+    margin-top: 9cm;
+    margin-left: 50%;
 }
 
 .header{

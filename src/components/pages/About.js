@@ -28,7 +28,7 @@ const About = () => {
   return (
     <div>
       {message[lang].info}
-      <Image src={Logo} className="wattodlogo" />
+      <Image mt="10px" src={Logo} className="wattodlogo" />
     </div>
   )
 }

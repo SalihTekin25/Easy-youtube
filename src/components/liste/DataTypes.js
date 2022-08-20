@@ -42,7 +42,7 @@ const DataTypes = (mp3, mp4) => {
     }
 
     return (
-        <div>
+        <>
             <Button className={styles.download} bgGradient="linear(to-r, #f3360e, #fb4b18)" color="#fff" onClick={onOpen}>{message[lang].download}</Button>
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
@@ -59,7 +59,8 @@ const DataTypes = (mp3, mp4) => {
                         <Button color="#fff" bgGradient="linear(to-r, #f3360e, #fb4b18)" mr="77%" variant='solid'>{message[lang].download}</Button>
                     </ModalFooter>
                 </ModalContent>
-            </Modal></div>
+            </Modal>
+            </>
     )
 }
 

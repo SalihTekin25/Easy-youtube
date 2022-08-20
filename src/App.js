@@ -27,7 +27,6 @@ function App() {
         <Routes>
           <Route exact path="/about" element={<About />} />
           <Route exact path="/" element={<Liste />} />
-          
         </Routes>
 
       </BrowserRouter>

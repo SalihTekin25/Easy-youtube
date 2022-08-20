@@ -1,4 +1,4 @@
-import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, RadioGroup, Stack, Radio, ModalFooter, useDisclosure, useColorMode } from '@chakra-ui/react'
+import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, RadioGroup, Stack, Radio, ModalFooter, useDisclosure, useColorMode, Text } from '@chakra-ui/react'
 import React from 'react'
 import { useState, createContext, useContext } from 'react'
 import { Language } from '../../context/Language';
@@ -37,19 +37,19 @@ const Settings = () => {
             theme: "Change Theme",
             language: "Language"
         },
-        'fr':{
+        'fr': {
             title: "Réglages",
             title2: "Réglages",
             close: "Proche",
             theme: "Change le thème",
             language: "Langue"
         },
-        'ar':{
+        'ar': {
             title: "إعدادات",
             title2: "إعدادات",
             close: "قريب",
             theme: "غير الخلفية",
-            language: "لغة" 
+            language: "لغة"
         }
     }
 
@@ -66,15 +66,15 @@ const Settings = () => {
                     <ModalHeader>{message[lang].title2}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <p className={styles.header}>{message[lang].theme}</p>
-                        <Button onClick={toggleColorMode} mr="5px">
+                        <Text mb="9px" className={styles.header}>{message[lang].theme}</Text>
+                        <Button mb="9px" onClick={toggleColorMode} mr="5px">
                             {message[lang].theme}
                         </Button>
                     </ModalBody>
                     <ModalBody>
-                        <p className={styles.header}>{message[lang].language}</p>
+                        <Text mb="9px" className={styles.header}>{message[lang].language}</Text>
                         <RadioGroup onChange={setLang} value={lang}>
-                            <Stack direction="column">
+                            <Stack mb="13px" direction="column">
                                 <Radio value='tr'>Turkish</Radio>
                                 <Radio value='en'>English</Radio>
                                 <Radio value='de'>German</Radio>
@@ -83,7 +83,6 @@ const Settings = () => {
                             </Stack>
                         </RadioGroup>
                     </ModalBody>
-
                     <ModalFooter>
                         <Button mr={40} onClick={onClose}>
                             {message[lang].close}

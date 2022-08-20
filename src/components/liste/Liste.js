@@ -15,27 +15,27 @@ const Liste = (index) => {
     const message = {
         'tr': {
             share: "Indirmeyi paylaş",
-            search: "Ara",
+            search: " Ara",
             videos: "tr"
         },
         'de': {
             share: "Download teilen",
-            search: "Suchen",
+            search: " Suchen",
             videos: "de"
         },
         'en': {
             share: "Share Download",
-            search: "Search",
+            search: " Search",
             videos: "en"
         },
         'fr':{
             share: "Partager Télécharger",
-            search: "Chercher",
+            search: " Chercher",
             videos: "fr"
         },
         'ar':{
             share: "مشاركة التنزيل",
-            search: "يبحث",
+            search: " يبحث",
             videos: "ar"
         }
     }
@@ -69,7 +69,7 @@ const Liste = (index) => {
                 deviceModel: "",
                 visitorData: "CgtURlU1OFpEcm1uSSiF2YGWBg%3D%3D",
                 userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36,gzip(gfe)",
-                clientName: "WEB",
+                clientName:"WEB",
                 clientVersion: "2.20220701.01.00",
                 osName: "Macintosh",
                 osVersion: "10_15_7",
@@ -220,7 +220,7 @@ const Liste = (index) => {
 
             <div className={styles.searchContainer}>
                 <Input height="2.5rem" className={styles.input} variant='unstyled' onChange={(e) => { setQuery(e.target.value); }} placeholder={message[lang].search} value={query} />
-                <Button ml="4px" mr="5px" onClick={() => getSearchList(query)} bgGradient="linear(to-r, #f3360e, #fb4b18)" color="#fff" variant='solid'>{message[lang].search}</Button>
+                <Button ml="6px" mr="5px" onClick={() => getSearchList(query)} bgGradient="linear(to-r, #f3360e, #fb4b18)" color="#fff" variant='solid'>{message[lang].search}</Button>
             </div>
 
             {isLoading ? <Spinner className={styles.spinner}
