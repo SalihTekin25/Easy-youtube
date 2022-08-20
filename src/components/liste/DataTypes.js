@@ -5,15 +5,18 @@ import {
     FormErrorMessage,
     FormHelperText,
     Select,
+    Radio,
+    Stack,
+    RadioGroup,
 } from '@chakra-ui/react'
 import styles from './styles.module.css'
 import { Language } from '../../context/Language';
 
 
 
-const DataTypes = (mp3, mp4) => {
+const DataTypes = () => {
 
-    const { lang, setLang } = useContext(Language)
+    const { lang, format, setFormat } = useContext(Language)
 
 
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -50,10 +53,12 @@ const DataTypes = (mp3, mp4) => {
                     <ModalHeader>{message[lang].datatype}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <Select>
-                            <option value='mp4' onSelect={() => mp3 = false}>mp4</option>
-                            <option onSelect={() => mp4 = false} value='mp3'>mp3</option>
-                        </Select>
+                    <RadioGroup onChange={setFormat} value={format}>
+                            <Stack mb="13px" direction="column">
+                                <Radio value='mp4'>Video</Radio>
+                                <Radio value='mp3'>Audio</Radio>
+                            </Stack>
+                        </RadioGroup>
                     </ModalBody>
                     <ModalFooter>
                         <Button color="#fff" bgGradient="linear(to-r, #f3360e, #fb4b18)" mr="77%" variant='solid'>{message[lang].download}</Button>

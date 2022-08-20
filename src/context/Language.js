@@ -5,6 +5,7 @@ export const Language = createContext()
 export const LanguageProvider = ({children}) =>{
 
     const [lang, setLang] = useState(localStorage.getItem("language") || "en")
+    const [format, setFormat] = useState("mp3")
 
     useEffect(() => {
 		localStorage.setItem("language", lang);
@@ -12,7 +13,10 @@ export const LanguageProvider = ({children}) =>{
 
     const values ={
         lang,
-        setLang
+        setLang,
+        setFormat,
+        format
+        
     }
 
     return <Language.Provider value={values}>{children}</Language.Provider>

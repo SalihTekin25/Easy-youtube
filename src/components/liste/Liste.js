@@ -48,15 +48,6 @@ const Liste = (index) => {
     const [isLoading, setIsLoading] = useState(false)
     let nothing;
 
-    let mp3 = true
-    let mp4 = false
-
-    if (mp3 === true) {
-        mp4 = false
-    }
-    if (mp4 === true) {
-        mp3 = false
-    }
 
 
     const payload = {
@@ -205,9 +196,7 @@ const Liste = (index) => {
 
 
     useEffect(() => { if (data) console.log(data.contents?.twoColumnSearchResultsRenderer?.primaryContents?.sectionListRenderer?.contents[0]?.itemSectionRenderer?.contents); }, [data]);
-    useEffect(() => {
-        console.log(mp3, mp4)
-    }, [mp3, mp4])
+   
 
 
     return (
@@ -244,7 +233,7 @@ const Liste = (index) => {
                             <StatLabel fontFamily="candal" color="grey">{(item.videoRenderer.ownerText.runs[0].text)}</StatLabel>
                             <StatHelpText>{(item.videoRenderer.viewCountText.simpleText)}</StatHelpText>
 
-                            <DataTypes mp3={mp3} mp4={mp4} />
+                            <DataTypes  />
 
                             <Button className={styles.share} mt="5px" colorScheme='gray'>{message[lang].share}</Button>
                         </Stat>
