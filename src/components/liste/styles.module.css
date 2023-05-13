@@ -1,69 +1,70 @@
 .image {
-    width: 400px;
-    height: 240px;
-    object-fit: contain;
-    cursor: pointer;
-   
+  width: 400px;
+  height: 240px;
+  object-fit: contain;
+  cursor: pointer;
 }
 
 .input {
-    box-shadow: 0px 0px 5px 1px #00000026;
-    height: 2.5rem;
-    padding-left: 1cm;
-    border-radius: 0.6rem;
+  box-shadow: 0px 0px 5px 1px #00000026;
+  height: 2.5rem;
+  padding-left: 1cm;
+  border-radius: 0.6rem;
 }
 
 .icon {
-    width: 40px;
+  width: 40px;
 }
 
 .div {
-    margin: 20px;
+  margin: 20px;
 }
 
 .grid {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
-
 .searchContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .stat {
-    box-shadow: 0px 0px 5px 1px #00000026;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: 0.4rem;
-    margin-left: 5px;
-    margin-right: 5px;
-    height: 12cm;
+  box-shadow: 0px 0px 5px 1px #00000026;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.4rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 12cm;
 }
-.share{
-
-    margin-left: 1%;
-    width: 49%;
-    margin-top:5px;    
+.share {
+  margin-left: 1%;
+  width: 49%;
+  margin-top: 5px;
 }
-.download{
-    bottom: 33px;
-    position: absolute;
-    width: 96%;
-    margin-right: 10px;
-
+.download {
+  bottom: 33px;
+  position: absolute;
+  width: 96%;
+  margin-right: 10px;
 }
-.spinner{
-    margin-left: 48%;
-    margin-top: 8cm;
+.spinner {
+  margin-left: 48%;
+  margin-top: 8cm;
 }
 
-.header{
-    font-weight: 500;
-    font-size: large;
+.header {
+  font-weight: 500;
+  font-size: large;
 }
 
-.sharebutton{
-    width: 100%;
+.sharebutton {
+  width: 100%;
+}
+.nosearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

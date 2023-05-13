@@ -10,6 +10,7 @@ import {
   Button,
   Spinner,
   Box,
+  Text,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import styles from "./styles.module.css";
@@ -54,8 +55,8 @@ const Liste = () => {
       {
         method: "GET",
         headers: {
-          "Access-Control-Allow-Origin" :"no-cors"
-        }
+          "Access-Control-Allow-Origin": "no-cors",
+        },
       }
     );
     const searchData = await searchResponse.json();
@@ -78,9 +79,6 @@ const Liste = () => {
   }, [data]);
 
   return (
-
-    
-
     <div className={styles.div}>
       <div className={styles.searchContainer}>
         <Input
@@ -166,8 +164,17 @@ const Liste = () => {
                   </Stat>
                 );
             }
-          )}
-      </Grid>
+          )}</Grid>
+        {!data && (
+          <Box>
+            <br/>
+            
+              <Text className={styles.nosearch} color="#A4A4A4" >{!isLoading && "Hello and welcome to the offical site from Wattod you can download videos and Audios unlimited and free. Have fun and have a look at our homepage and have a look at our other projects."}</Text>
+              <br/>
+              <Text className={styles.nosearch} color="#A4A4A4" cursor="pointer" onClick={() => {window.open("https://wattod.com")}} >{!isLoading && "Click me for the Homepage"}</Text>
+          </Box>
+        )}
+      
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 export const AllContextes = createContext();
 
 export const AllContextesProvider = ({ children }) => {
-  const [lang, setLang] = useState(localStorage.getItem("language") || "en");
+  const [lang, setLang]  = useState(localStorage.getItem("language") || "en");
   const [format, setFormat] = useState("audioandvideo");
   const [quality, setQuality] = useState();
 

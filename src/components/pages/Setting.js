@@ -5,12 +5,6 @@ import styles from '../liste/styles.module.css'
 import SettingsIconDark from './SettingsIconDark.svg'
 import SettingsIcon from './SettingsIcon.png'
 
-
-
-
-
-
-
 const Settings = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
