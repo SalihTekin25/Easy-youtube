@@ -1,8 +1,10 @@
-import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, RadioGroup, Stack, Radio, ModalFooter, useDisclosure, useColorMode, Text } from '@chakra-ui/react'
+import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, RadioGroup, Stack, Radio, ModalFooter, useDisclosure, useColorMode, Text, Image } from '@chakra-ui/react'
 import React from 'react'
-import { useState, createContext, useContext } from 'react'
-import { Language } from '../../context/Language';
+import { useAllContext } from '../../context/AllContextes';
 import styles from '../liste/styles.module.css'
+import SettingsIconDark from './SettingsIconDark.svg'
+import SettingsIcon from './SettingsIcon.png'
+
 
 
 
@@ -12,8 +14,9 @@ import styles from '../liste/styles.module.css'
 const Settings = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const { lang, setLang } = useContext(Language)
+    const { lang, setLang } = useAllContext()
 
+    const ColorMode=localStorage.getItem('chakra-ui-color-mode')
 
     const message = {
         'tr': {
@@ -53,13 +56,11 @@ const Settings = () => {
         }
     }
 
-    const { colorMode, toggleColorMode } = useColorMode()
+    const { toggleColorMode } = useColorMode()
 
     return (
-
         <>
-            <Button bgGradient="linear(to-r, #f3360e, #fb4b18)" color='#fff' mr="5px" onClick={onOpen}>{message[lang].title}</Button>
-
+            <Button onClick={onOpen}><Image w="20px"src={ColorMode === "dark" ? SettingsIconDark : SettingsIcon} /></Button>
             <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import About from '../pages/About'
 import {
@@ -13,22 +13,18 @@ import {
     ModalBody,
     ModalCloseButton,
     useDisclosure,
-    useColorMode,
-    Stack,
-    RadioGroup
 } from '@chakra-ui/react'
 import './styles.css'
 import Logo from './WattodLogo.png'
-import { useState } from 'react'
 import ChangeLang from '../pages/Setting'
-import { Language } from '../../context/Language';
+import { useAllContext } from '../../context/AllContextes';
 
 
 
-const Navbar = (value) => {
+const Navbar = () => {
 
 
-    const { lang, setLang } = useContext(Language)
+    const { lang } = useAllContext()
 
 
     const message = {
@@ -52,7 +48,7 @@ const Navbar = (value) => {
             info: "Info",
             close: "Proche"
         },
-        'ar':{
+        'ar': {
             home: "الصفحة الرئيسية",
             info: "معلومات",
             close: "قريب"
@@ -64,18 +60,18 @@ const Navbar = (value) => {
     return (
         <div>
             <nav className="menu" >
-                <div className="left">
+                <div >
                     <IconButton className="iconbutton" colorScheme='white' aria-label='Search database'><Link to="/"><Image src={Logo} alt='Wattod' /></Link></IconButton>
                 </div>
-                <div className="right">
+                <div>
 
                     <Button bgGradient="linear(to-r, #f3360e, #fb4b18)" color="#fff" variant='solid' className="button">
                         <Link to="/">{message[lang].home}</Link>
                     </Button>
 
-                    <ChangeLang />
 
-                    <Button onClick={onOpen}>{message[lang].info}</Button>
+
+                    <Button  mr="5px" bgGradient="linear(to-r, #f3360e, #fb4b18)" color="white" onClick={onOpen}>{message[lang].info}</Button>
 
                     <Modal isOpen={isOpen} onClose={onClose}>
                         <ModalOverlay />
@@ -94,6 +90,7 @@ const Navbar = (value) => {
                         </ModalContent>
                     </Modal>
 
+                    <ChangeLang />
 
                 </div>
             </nav>
@@ -103,5 +100,4 @@ const Navbar = (value) => {
 
 export default Navbar
 
-// {colorMode === 'light' ? 'Dark' : 'Light'}
 

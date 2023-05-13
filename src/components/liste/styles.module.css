@@ -9,8 +9,7 @@
 .input {
     box-shadow: 0px 0px 5px 1px #00000026;
     height: 2.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 1cm;
     border-radius: 0.6rem;
 }
 
@@ -24,7 +23,6 @@
 
 .grid {
     margin-top: 20px;
-
 }
 
 
@@ -48,23 +46,24 @@
     margin-left: 1%;
     width: 49%;
     margin-top:5px;    
-    
-
 }
 .download{
-    width: 49%;
-    margin-top: 5px;
-    margin-right: 1%;
-    
-    
+    bottom: 33px;
+    position: absolute;
+    width: 96%;
+    margin-right: 10px;
 
 }
 .spinner{
-    margin-top: 9cm;
-    margin-left: 50%;
+    margin-left: 48%;
+    margin-top: 8cm;
 }
 
 .header{
     font-weight: 500;
     font-size: large;
+}
+
+.sharebutton{
+    width: 100%;
 }

@@ -1,28 +1,27 @@
-import React, { useContext } from 'react'
+import React from 'react'
 import Logo from '../container/WattodLogo.png'
 import { Image } from '@chakra-ui/react'
-import styles from '../container/styles.css'
-import { Language } from '../../context/Language';
+import { useAllContext } from '../../context/AllContextes';
 
 
 const About = () => {
-  const { lang, setLang } = useContext(Language)
+  const { lang } = useAllContext()
 
   const message = {
     'tr': {
-      info: "Merhaba ve Wattod tools larina hoş geldiniz, buradan video ve ses indirebilirsiniz İyi eğlenceler"
+      info: "Wattod Tools ile videoları ve sesleri indirebilirsiniz. Kullanımı kolaydır. İyi eğlenceler."
     },
     'de': {
-      info: "Hallo und Willkommen zu den Wattod tools du kannst hier videos und audios herunterladen Viel Spaß"
+      info: " Mit Wattod Tools können Sie Videos und Audios herunterladen. Es ist einfach zu bedienen. Habe Spaß."
     },
     'en': {
-      info: "Hello and welcome to the Wattod tools you can download videos and audios here Have fun"
+      info: "You can download videos and audios with Wattod Tools. It is easy to use. Have fun."
     },
     'fr':{
-      info: "Bonjour et bienvenue sur les outils Wattod vous pouvez télécharger des vidéos et des audios ici Amusez-vous"
+      info: "Vous pouvez télécharger des vidéos et des audios avec Wattod Tools. C'est facile a utiliser. S'amuser."
     },
     'ar':{
-      info: "مرحبًا ومرحبًا بكم في أدوات Wattod ، يمكنك تنزيل مقاطع الفيديو والتسجيلات الصوتية هنا واستمتع"
+      info: "يمكنك تنزيل مقاطع الفيديو والتسجيلات الصوتية باستخدام Wattod Tools. سهلة الاستخدام. استمتع." 
     }
   }
   return (
